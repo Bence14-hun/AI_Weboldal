@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Weboldal</title>
+</head>
+<body>
+    <h1>Üdvözöllek az AI Weboldalon!</h1>
+
+    <h2>Szöveg generálása</h2>
+    <form action="/generate" method="post">
+        <input type="text" name="input_text" placeholder="Írj egy kezdő mondatot">
+        <button type="submit">Generálás</button>
+    </form>
+    {% if result %}
+        <p><strong>Generált szöveg:</strong> {{ result }}</p>
+    {% endif %}
+
+    <h2>Matematikai feladat megoldása</h2>
+    <form action="/solve_math" method="post">
+        <input type="text" name="equation" placeholder="Pl.: x**2 - 4">
+        <button type="submit">Megoldás</button>
+    </form>
+    {% if math_result %}
+        <p><strong>Megoldás:</strong> {{ math_result }}</p>
+    {% endif %}
+
+    <h2>Szöveg felismerése képről</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <button type="submit">Feltöltés és felismerés</button>
+    </form>
+    {% if ocr_result %}
+        <p><strong>Felismert szöveg:</strong> {{ ocr_result }}</p>
+    {% endif %}
+</body>
+</html>
