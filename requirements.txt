@@ -1,3 +1,5 @@
+tensorflow
+torch
 flask
 pytesseract
 Pillow
