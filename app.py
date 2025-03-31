@@ -1,3 +1,20 @@
+import pytesseract
+from flask import Flask, request, render_template
+import sympy as sp
+from PIL import Image
+
+
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Varga Bence\AppData\Local\Programs\Tesseract-OCR'  
+
+app = Flask(__name__)
+
+
+import sys
+
+if sys.platform == "win32":
+    import win_unicode_console
+    win_unicode_console.enable()
+
 from flask import Flask, request, render_template
 import pytesseract
 from PIL import Image

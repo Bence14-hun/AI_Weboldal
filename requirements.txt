@@ -1,7 +1,6 @@
 flask
-torch
-transformers
-opencv-python
-numpy
 pytesseract
-gunicorn
+Pillow
+transformers
+sympy
+win_unicode_console
