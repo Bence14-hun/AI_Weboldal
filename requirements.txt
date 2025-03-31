@@ -3,7 +3,7 @@ torch
 flask
 pytesseract
 Pillow
-transformers
+transformers==4.36.2
 sympy
 win_unicode_console
 gunicorn
