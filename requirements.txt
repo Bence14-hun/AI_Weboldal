@@ -4,3 +4,4 @@ Pillow
 transformers
 sympy
 win_unicode_console
+gunicorn
